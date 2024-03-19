@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./output.css">
+    <style>
+        .boooo {
+            background-image: linear-gradient(to right, #85C7B3, #265C4C);
+        }
+
+        #jk {
+            background-image: linear-gradient(to right, #86971C, #124838);
+            background-clip: text;
+            color: transparent;
+        }
+
+        .e3 {
+            right: 120px;
+        }
+
+        @media screen and (max-width:768px) {
+            .e3 {
+                width: 50%;
+                right: 100px;
+                height: 200px;
+                overflow-y: auto;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .e3 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mt-2 ">
+        <!-- head kojeck -->
+        <div class="container-fluid container-xxl">
+            <div class="d-flex justify-content-lg-end justify-center">
+                <ul class="d-flex gap-4   text-[10px] md:text-[16px] ">
+                    <li class="hover:text-lime-300 transition-colors">
+                        <a class="flex items-center " href=""><svg width="17" height="16" viewBox="0 0 17 16"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_6)">
+                                    <path
+                                        d="M5.17804 6.992H6.84204C7.00204 6.97066 7.13804 6.896 7.25004 6.768C7.36204 6.64 7.41804 6.49333 7.41804 6.328C7.41804 6.16266 7.36204 6.016 7.25004 5.888C7.13804 5.76 7.00204 5.68533 6.84204 5.664H6.17004V5.328C6.14871 5.168 6.07404 5.032 5.94604 4.92C5.81804 4.808 5.67138 4.752 5.50604 4.752C5.34071 4.752 5.19404 4.808 5.06604 4.92C4.93804 5.032 4.86338 5.168 4.84204 5.328V5.696C4.42604 5.78133 4.09004 5.99733 3.83404 6.344C3.57804 6.69066 3.47138 7.07733 3.51404 7.504C3.55671 7.93066 3.73804 8.28533 4.05804 8.568C4.37804 8.85066 4.75138 8.992 5.17804 8.992H5.85004C5.94604 8.992 6.02604 9.024 6.09004 9.088C6.15404 9.152 6.18604 9.232 6.18604 9.328C6.18604 9.424 6.15404 9.504 6.09004 9.568C6.02604 9.632 5.94604 9.664 5.85004 9.664H4.17004C4.01004 9.68533 3.87404 9.76 3.76204 9.888C3.65004 10.016 3.59404 10.1627 3.59404 10.328C3.59404 10.4933 3.65004 10.64 3.76204 10.768C3.87404 10.896 4.01004 10.9707 4.17004 10.992H4.84204V11.328C4.86338 11.488 4.93804 11.624 5.06604 11.736C5.19404 11.848 5.34071 11.904 5.50604 11.904C5.67138 11.904 5.81804 11.848 5.94604 11.736C6.07404 11.624 6.14871 11.488 6.17004 11.328V10.96C6.58604 10.8747 6.92204 10.6613 7.17804 10.32C7.43404 9.97866 7.54071 9.59466 7.49804 9.168C7.45538 8.74133 7.27671 8.384 6.96204 8.096C6.64738 7.808 6.27671 7.664 5.85004 7.664H5.17804C5.08204 7.664 5.00204 7.632 4.93804 7.568C4.87404 7.504 4.84204 7.424 4.84204 7.328C4.84204 7.232 4.87404 7.152 4.93804 7.088C5.00204 7.024 5.08204 6.992 5.17804 6.992ZM12.842 8H10.842V2C10.842 1.88266 10.8127 1.77333 10.754 1.672C10.6954 1.57066 10.6127 1.49066 10.506 1.432C10.3994 1.37333 10.29 1.344 10.178 1.344C10.066 1.344 9.95671 1.37066 9.85004 1.424L7.85004 2.56L5.85004 1.424C5.74338 1.36 5.63138 1.328 5.51404 1.328C5.39671 1.328 5.28471 1.36 5.17804 1.424L3.17804 2.56L1.17804 1.424C1.07138 1.36 0.959377 1.328 0.842044 1.328C0.724711 1.328 0.612711 1.36 0.506044 1.424C0.399377 1.488 0.316711 1.57066 0.258044 1.672C0.199377 1.77333 0.170044 1.88266 0.170044 2V12.672C0.170044 13.0347 0.260711 13.368 0.442044 13.672C0.623377 13.976 0.866044 14.2187 1.17004 14.4C1.47404 14.5813 1.80738 14.672 2.17004 14.672H11.514C11.8767 14.672 12.21 14.5813 12.514 14.4C12.818 14.2187 13.0607 13.976 13.242 13.672C13.4234 13.368 13.514 13.0347 13.514 12.672V8.672C13.514 8.49066 13.4474 8.33333 13.314 8.2C13.1807 8.06666 13.0234 8 12.842 8ZM2.17004 13.328C1.98871 13.328 1.83404 13.264 1.70604 13.136C1.57804 13.008 1.51404 12.8533 1.51404 12.672V3.152L2.84204 3.92C2.94871 3.97333 3.06071 4 3.17804 4C3.29538 4 3.40738 3.97333 3.51404 3.92L5.51404 2.768L7.51404 3.92C7.62071 3.97333 7.73004 4 7.84204 4C7.95404 4 8.06338 3.97333 8.17004 3.92L9.51404 3.152V12.672C9.51404 12.896 9.55138 13.1147 9.62604 13.328H2.17004ZM12.17 12.672C12.1487 12.832 12.074 12.968 11.946 13.08C11.818 13.192 11.6714 13.248 11.506 13.248C11.3407 13.248 11.194 13.192 11.066 13.08C10.938 12.968 10.8634 12.832 10.842 12.672V9.328H12.17V12.672Z"
+                                        fill="#124838" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_6">
+                                        <rect width="16.02" height="16" fill="white"
+                                            transform="matrix(1 0 0 -1 0.160034 16)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Sales
+                        </a>
+                    </li>
+                    <li class="hover:text-lime-300 transition-colors">
+                        <a class="flex items-center " href=""><svg width="17" height="16" viewBox="0 0 17 16"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_9)">
+                                    <path
+                                        d="M11.046 5.952C11.046 5.888 11.0353 5.82933 11.014 5.776V5.712C10.982 5.648 10.9393 5.58933 10.886 5.536L6.88601 1.536C6.83268 1.48266 6.76868 1.44 6.69402 1.408H6.63001C6.56601 1.376 6.49668 1.34933 6.42201 1.328H2.39001C2.02735 1.328 1.69401 1.41866 1.39001 1.6C1.08601 1.78133 0.843348 2.024 0.662015 2.328C0.480681 2.632 0.390015 2.96533 0.390015 3.328V12.672C0.390015 13.0347 0.480681 13.368 0.662015 13.672C0.843348 13.976 1.08601 14.2187 1.39001 14.4C1.69401 14.5813 2.02735 14.672 2.39001 14.672H9.04601C9.40868 14.672 9.74201 14.5813 10.046 14.4C10.35 14.2187 10.5927 13.976 10.774 13.672C10.9553 13.368 11.046 13.0347 11.046 12.672V5.952ZM7.04601 3.6L8.77402 5.328H7.71802C7.53668 5.328 7.37935 5.264 7.24602 5.136C7.11268 5.008 7.04601 4.85333 7.04601 4.672V3.6ZM9.71801 12.672C9.71801 12.8533 9.65135 13.008 9.51801 13.136C9.38468 13.264 9.22735 13.328 9.04601 13.328H2.39001C2.20868 13.328 2.05135 13.264 1.91801 13.136C1.78468 13.008 1.71801 12.8533 1.71801 12.672V3.328C1.71801 3.14666 1.78468 2.992 1.91801 2.864C2.05135 2.736 2.20868 2.672 2.39001 2.672H5.71801V4.672C5.71801 5.03466 5.80868 5.368 5.99002 5.672C6.17135 5.976 6.41401 6.21866 6.71801 6.4C7.02202 6.58133 7.35535 6.672 7.71802 6.672H9.71801V12.672ZM5.71801 7.552C5.29135 7.31733 4.83802 7.25333 4.35801 7.36C3.87801 7.46666 3.49401 7.71733 3.20601 8.112C2.91801 8.50666 2.79535 8.94666 2.83801 9.432C2.88068 9.91733 3.07801 10.3307 3.43001 10.672L5.23801 12.48C5.36601 12.6187 5.52601 12.688 5.71801 12.688C5.91002 12.688 6.07001 12.6187 6.19801 12.48L8.00601 10.672C8.35802 10.3307 8.55535 9.91733 8.59801 9.432C8.64068 8.94666 8.51801 8.50666 8.23001 8.112C7.94202 7.71733 7.55801 7.46666 7.07801 7.36C6.59801 7.25333 6.14468 7.31733 5.71801 7.552ZM7.04601 8.848C7.16335 8.96533 7.22201 9.10933 7.22201 9.28C7.22201 9.45066 7.16335 9.59466 7.04601 9.712L5.71801 11.04L4.39001 9.712C4.27268 9.59466 4.21401 9.45066 4.21401 9.28C4.21401 9.10933 4.27268 8.96533 4.39001 8.848C4.50735 8.73066 4.65135 8.672 4.82201 8.672C4.99268 8.672 5.13935 8.73333 5.26201 8.856C5.38468 8.97866 5.53935 9.04 5.72602 9.04C5.91268 9.04 6.06735 8.97866 6.19001 8.856C6.31268 8.73333 6.45668 8.672 6.62201 8.672C6.78735 8.672 6.92868 8.73066 7.04601 8.848Z"
+                                        fill="#124838" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_9">
+                                        <rect width="16.02" height="16" fill="white"
+                                            transform="matrix(1 0 0 -1 0.380005 16)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            wishlist
+                        </a>
+                    </li>
+                    <li class="hover:text-lime-300 transition-colors">
+                        <a class="flex items-center " href=""><svg width="17" height="16" viewBox="0 0 17 16"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_12)">
+                                    <path
+                                        d="M5.13001 12.672C4.92735 12.672 4.74068 12.728 4.57001 12.84C4.39935 12.952 4.27401 13.104 4.19401 13.296C4.11401 13.488 4.09535 13.6827 4.13801 13.88C4.18068 14.0773 4.27401 14.248 4.41801 14.392C4.56201 14.536 4.73535 14.6267 4.93801 14.664C5.14068 14.7013 5.33535 14.68 5.52202 14.6C5.70868 14.52 5.85802 14.3947 5.97002 14.224C6.08202 14.0533 6.13801 13.8667 6.13801 13.664C6.13801 13.3867 6.03935 13.152 5.84201 12.96C5.64468 12.768 5.40735 12.672 5.13001 12.672ZM12.138 10.672H4.13801C3.95668 10.672 3.79935 10.6053 3.66601 10.472C3.53268 10.3387 3.46601 10.1813 3.46601 10C3.46601 9.81866 3.53268 9.66133 3.66601 9.528C3.79935 9.39466 3.95668 9.328 4.13801 9.328H9.78602C10.234 9.328 10.6367 9.19466 10.994 8.928C11.3513 8.66133 11.594 8.31466 11.722 7.888L12.778 4.176C12.8313 3.96266 12.794 3.76799 12.666 3.592C12.538 3.416 12.362 3.328 12.138 3.328H3.96201C3.82335 2.93333 3.58068 2.61333 3.23401 2.368C2.88735 2.12266 2.50068 2 2.07401 2H1.46601C1.30601 2.02133 1.17001 2.09599 1.05801 2.224C0.946015 2.352 0.890015 2.49866 0.890015 2.664C0.890015 2.82933 0.946015 2.976 1.05801 3.104C1.17001 3.232 1.30601 3.30666 1.46601 3.328H2.07401C2.22335 3.328 2.35668 3.37333 2.47401 3.46399C2.59135 3.55466 2.67135 3.67466 2.71401 3.824L2.82601 4.176L3.91401 8.016C3.57268 8.05866 3.26601 8.18133 2.99401 8.384C2.72201 8.58666 2.51135 8.83999 2.36201 9.144C2.21268 9.448 2.14868 9.77066 2.17001 10.112C2.19135 10.4533 2.29268 10.768 2.47401 11.056C2.65535 11.344 2.89268 11.5733 3.18601 11.744C3.47935 11.9147 3.79668 12 4.13801 12H12.138C12.298 11.9787 12.434 11.904 12.546 11.776C12.658 11.648 12.714 11.5013 12.714 11.336C12.714 11.1707 12.658 11.024 12.546 10.896C12.434 10.768 12.298 10.6933 12.138 10.672ZM11.242 4.672L10.442 7.52C10.3993 7.66933 10.3167 7.78666 10.194 7.87199C10.0713 7.95733 9.93535 8 9.78602 8H5.30602L5.13001 7.408L4.34601 4.672H11.242ZM10.474 12.672C10.2713 12.672 10.0847 12.728 9.91401 12.84C9.74335 12.952 9.61535 13.1013 9.53001 13.288C9.44468 13.4747 9.42335 13.6693 9.46601 13.872C9.50868 14.0747 9.60202 14.248 9.74601 14.392C9.89001 14.536 10.0633 14.6293 10.266 14.672C10.4687 14.7147 10.6633 14.6933 10.85 14.608C11.0367 14.5227 11.186 14.3947 11.298 14.224C11.41 14.0533 11.466 13.8667 11.466 13.664C11.466 13.3867 11.37 13.152 11.178 12.96C10.986 12.768 10.7513 12.672 10.474 12.672Z"
+                                        fill="#124838" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_12">
+                                        <rect width="16.02" height="16" fill="white"
+                                            transform="matrix(1 0 0 -1 0.880005 16)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+
+                            cart
+                        </a>
+                    </li>
+                    <li class="hover:text-lime-300 transition-colors">
+                        <a class="flex items-center " href=""><svg width="17" height="16" viewBox="0 0 17 16"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_15)">
+                                    <path
+                                        d="M7.04811 1.328C6.17345 1.328 5.33611 1.49334 4.53611 1.82401C3.73611 2.15467 3.02678 2.62134 2.40811 3.22401C1.78945 3.82667 1.30411 4.52801 0.952113 5.32801C0.600113 6.12801 0.413446 6.96001 0.392113 7.82401C0.37078 8.68801 0.512113 9.52534 0.816113 10.336C1.12011 11.1467 1.56545 11.872 2.15211 12.512C2.78145 13.1947 3.52278 13.7227 4.37611 14.096C5.22945 14.4693 6.12011 14.656 7.04811 14.656C7.97611 14.656 8.86678 14.4693 9.72011 14.096C10.5734 13.7227 11.3148 13.1947 11.9441 12.512C12.5308 11.872 12.9761 11.1467 13.2801 10.336C13.5841 9.52534 13.7254 8.68801 13.7041 7.82401C13.6828 6.96001 13.4961 6.12801 13.1441 5.32801C12.7921 4.52801 12.3068 3.82667 11.6881 3.22401C11.0694 2.62134 10.3601 2.15467 9.56011 1.82401C8.76011 1.49334 7.92278 1.328 7.04811 1.328ZM7.04811 13.328C6.35478 13.328 5.69078 13.2 5.05611 12.944C4.42145 12.688 3.85345 12.32 3.35211 11.84C3.66145 11.0933 4.15211 10.496 4.82411 10.048C5.49611 9.60001 6.23745 9.37601 7.04811 9.37601C7.85878 9.37601 8.60011 9.60001 9.27211 10.048C9.94411 10.496 10.4348 11.0933 10.7441 11.84C10.2428 12.32 9.67478 12.688 9.04011 12.944C8.40545 13.2 7.74145 13.328 7.04811 13.328ZM5.72011 6.67201C5.72011 6.30934 5.85078 5.99734 6.11211 5.73601C6.37345 5.47467 6.68545 5.34401 7.04811 5.34401C7.41078 5.34401 7.72278 5.47467 7.98411 5.73601C8.24545 5.99734 8.37611 6.30934 8.37611 6.67201C8.37611 7.03467 8.24545 7.34667 7.98411 7.60801C7.72278 7.86934 7.41078 8.00001 7.04811 8.00001C6.68545 8.00001 6.37345 7.86934 6.11211 7.60801C5.85078 7.34667 5.72011 7.03467 5.72011 6.67201ZM11.6561 10.672C11.3574 10.16 10.9841 9.71201 10.5361 9.32801C10.0881 8.94401 9.59211 8.64001 9.04811 8.41601C9.35745 8.06401 9.56011 7.66134 9.65611 7.20801C9.75211 6.75467 9.73611 6.30667 9.60811 5.86401C9.48011 5.42134 9.24545 5.03734 8.90411 4.71201C8.56278 4.38667 8.16811 4.168 7.72011 4.05601C7.27211 3.94401 6.82411 3.94401 6.37611 4.05601C5.92811 4.168 5.53345 4.38667 5.19211 4.71201C4.85078 5.03734 4.61611 5.42134 4.48811 5.86401C4.36011 6.30667 4.34411 6.75467 4.44011 7.20801C4.53611 7.66134 4.73878 8.06401 5.04811 8.41601C4.50411 8.64001 4.00811 8.94401 3.56011 9.32801C3.11211 9.71201 2.73878 10.16 2.44011 10.672C1.96011 9.85067 1.72011 8.96001 1.72011 8.00001C1.72011 7.04001 1.96011 6.14401 2.44011 5.31201C2.92011 4.51201 3.56011 3.87201 4.36011 3.392C5.19211 2.91201 6.08811 2.67201 7.04811 2.67201C8.00811 2.67201 8.90411 2.91201 9.73611 3.392C10.5361 3.87201 11.1761 4.51201 11.6561 5.31201C12.1361 6.14401 12.3761 7.04001 12.3761 8.00001C12.3761 8.96001 12.1361 9.85067 11.6561 10.672Z"
+                                        fill="#124838" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_15">
+                                        <rect width="16.02" height="16" fill="white"
+                                            transform="matrix(1 0 0 -1 0.380005 16)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+
+
+                            log in/sign up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- head bozorg -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="w-100">
+                <div class=" w-100 bg-[#FFDA91] p-4">
+                    <div class="container-fluid container-xl  flex items-center justify-between ">
+                        <div class="navbar-brand">
+                            <h2 class="mb-0 font-semibold">IRANDOUST</h2>
+                        </div>
+                        <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#fg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                        </button>
+                        <div class="offcanvas offcanvas-start w-50 d-lg-none d-block" id="fg">
+                            <div class="offcanvas-body d-flex flex-column  h-100">
+                                <ul class="nav nav-underline d-lg-none d-block mb-auto ">
+                                    <li class="nav-item"><a class="nav-link  hover:text-green-600" href="">home</a></li>
+                                    <li class="nav-item"><a class="nav-link hover:text-green-600" href="">about</a></li>
+                                    <li class="nav-item"><a class="nav-link hover:text-green-600" href="">catalog</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link hover:text-green-600" href="">reviews</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link hover:text-green-600" href="">support</a>
+                                    </li>
+                                </ul>
+                                <div class="">
+                                    <p>Made by @GH</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="" class="w-[300px] d-lg-flex d-none">
+                            <div class="d-flex align-items-center position-relative w-100">
+                                <input class=" form-control border-dark rounded-pill p-2.5 ps-5 bg-ohhh/20 " type="text"
+                                    placeholder="Search...">
+                                <button class="position-absolute left-4 ">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.6" clip-path="url(#clip0_1_475)">
+                                            <path
+                                                d="M20.1892 20.73L16.4692 17.058C17.4452 15.842 18.0612 14.458 18.3172 12.906C18.5732 11.418 18.4532 9.95399 17.9572 8.51399C17.4612 7.04199 16.6292 5.78199 15.4612 4.73399C14.2932 3.68599 12.9412 2.98599 11.4052 2.63399C9.93324 2.31399 8.46924 2.35399 7.01324 2.75399C5.50924 3.18599 4.20124 3.95799 3.08924 5.06999C1.97724 6.18199 1.20524 7.48999 0.773244 8.99399C0.373244 10.45 0.333244 11.914 0.653244 13.386C1.00524 14.922 1.70524 16.274 2.75324 17.442C3.80124 18.61 5.06124 19.442 6.53324 19.938C7.97324 20.434 9.43724 20.554 10.9252 20.298C12.4772 20.042 13.8612 19.426 15.0772 18.45L18.7492 22.122C18.9412 22.33 19.1812 22.434 19.4692 22.434C19.7572 22.434 19.9972 22.334 20.1892 22.134C20.3812 21.934 20.4772 21.698 20.4772 21.426C20.4772 21.154 20.3812 20.922 20.1892 20.73ZM9.46124 18.45C8.19724 18.45 7.02124 18.13 5.93324 17.49C4.87724 16.866 4.03724 16.026 3.41324 14.97C2.77324 13.882 2.45324 12.706 2.45324 11.442C2.45324 10.178 2.77324 9.00199 3.41324 7.91399C4.03724 6.85799 4.87724 6.01799 5.93324 5.39399C7.02124 4.75399 8.19724 4.43399 9.46124 4.43399C10.7252 4.43399 11.9012 4.75399 12.9892 5.39399C14.0452 6.01799 14.8852 6.85799 15.5092 7.91399C16.1492 9.00199 16.4692 10.178 16.4692 11.442C16.4692 12.706 16.1492 13.882 15.5092 14.97C14.8852 16.026 14.0452 16.866 12.9892 17.49C11.9012 18.13 10.7252 18.45 9.46124 18.45Z"
+                                                fill="#124838" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_475">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.439972 24.45)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </form>
+                        <ul class="nav nav-underline d-lg-flex d-none ">
+                            <li class="nav-item"><a class="nav-link  hover:text-green-600" href="">home</a></li>
+                            <li class="nav-item"><a class="nav-link hover:text-green-600" href="">about</a></li>
+                            <li class="nav-item"><a class="nav-link hover:text-green-600" href="">catalog</a></li>
+                            <li class="nav-item"><a class="nav-link hover:text-green-600" href="">reviews</a></li>
+                            <li class="nav-item"><a class="nav-link hover:text-green-600" href="">support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- head aks -->
+        <div class="container-fluid container-xxl mt-28">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-6 col-12">
+                    <div class="">
+                        <img class="w-100 h-100" src="./image/Section → man_watering.png.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="">
+                        <h3 class="text-[40px] mb-4">Be a Plant Parent
+                            today with <span id="jk">Aranyak</span></h3>
+                        <p class="mb-4">First timer or experienced, we have something for
+                            you. Take a look at our vast collection of greenery &
+                            let us help you transform your household and
+                            front/back yard.</p>
+                        <div class="d-flex justify-content-lg-start justify-content-center">
+                            <button class="boooo d-flex align-items-center gap-2 p-2 rounded-pill">
+                                <a class="text-light" href="">explore catalog</a>
+                                <svg width="21" height="31" viewBox="0 0 21 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_25)">
+                                        <path
+                                            d="M10.78 14.955C10.74 14.8484 10.68 14.755 10.6 14.675L6.44 10.515C6.28 10.355 6.08333 10.2717 5.85 10.265C5.61666 10.2584 5.41666 10.3384 5.25 10.505C5.08333 10.6717 5 10.8717 5 11.105C5 11.3384 5.08 11.535 5.24 11.695L8 14.435H1.68C1.45333 14.435 1.25666 14.5184 1.09 14.685C0.92333 14.8517 0.839996 15.0484 0.839996 15.275C0.839996 15.5017 0.92333 15.6984 1.09 15.865C1.25666 16.0317 1.45333 16.115 1.68 16.115H8L5.24 18.855C5.08 19.015 5 19.2117 5 19.445C5 19.6784 5.08 19.8784 5.24 20.045C5.4 20.2117 5.6 20.295 5.84 20.295C6.08 20.295 6.28 20.2084 6.44 20.035L10.6 15.875C10.68 15.795 10.74 15.7017 10.78 15.595C10.8733 15.3817 10.8733 15.1684 10.78 14.955Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_25">
+                                            <rect width="20" height="20" fill="white"
+                                                transform="matrix(1 0 0 -1 0.839996 25.275)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="mt-20 ">
+        <div class="container-fluid container-xxl">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 col-12">
+                    <div class="">
+                        <h6>we have got you covered</h6>
+                        <h3 class="text-[40px] mb-4 text-[#E3A476] md:w-[100%] w-[75%]">However Popular or
+                            <span class="fw-bold">rare plant</span> it is
+                        </h3>
+                        <p class="mb-4 fw-light md:w-[100%] w-[75%]">Our catalog of plants of fruits and flowers;
+                            for indoors
+                            and outdoors; is expanding everyday.</p>
+                        <div class="d-flex justify-content-lg-start justify-content-center">
+                            <button class="boooo d-flex align-items-center gap-2 p-2 rounded-pill">
+                                <a class="text-light" href="">explore catalog</a>
+                                <svg width="21" height="31" viewBox="0 0 21 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_25)">
+                                        <path
+                                            d="M10.78 14.955C10.74 14.8484 10.68 14.755 10.6 14.675L6.44 10.515C6.28 10.355 6.08333 10.2717 5.85 10.265C5.61666 10.2584 5.41666 10.3384 5.25 10.505C5.08333 10.6717 5 10.8717 5 11.105C5 11.3384 5.08 11.535 5.24 11.695L8 14.435H1.68C1.45333 14.435 1.25666 14.5184 1.09 14.685C0.92333 14.8517 0.839996 15.0484 0.839996 15.275C0.839996 15.5017 0.92333 15.6984 1.09 15.865C1.25666 16.0317 1.45333 16.115 1.68 16.115H8L5.24 18.855C5.08 19.015 5 19.2117 5 19.445C5 19.6784 5.08 19.8784 5.24 20.045C5.4 20.2117 5.6 20.295 5.84 20.295C6.08 20.295 6.28 20.2084 6.44 20.035L10.6 15.875C10.68 15.795 10.74 15.7017 10.78 15.595C10.8733 15.3817 10.8733 15.1684 10.78 14.955Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_25">
+                                            <rect width="20" height="20" fill="white"
+                                                transform="matrix(1 0 0 -1 0.839996 25.275)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12  ">
+                    <img src="./image/Section → planting.png.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="mt-20">
+            <div class="container-fluid container-xxl">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column align-items-center justify-center">
+                            <div class="">
+                                <svg width="161" height="122" viewBox="0 0 161 122" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="160" height="121" transform="translate(0.660034 0.330078)"
+                                        fill="url(#pattern0)" />
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                                            height="1">
+                                            <use xlink:href="#image0_1_39" transform="scale(0.00625 0.00826446)" />
+                                        </pattern>
+                                        <image id="image0_1_39" width="160" height="121"
+                                            xlink:href="data:image/png;base64,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" />
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h4 class="text-[#E3A476] text-center text-xl font-bold"><svg width="200" height="54"
+                                    viewBox="0 0 293 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.671745 42.6301C0.671745 40.7101 0.815745 38.9101 1.10374 37.2301C1.43974 35.5501 2.01574 33.9421 2.83175 32.4061C3.69575 30.8701 4.89574 29.4061 6.43174 28.0141C7.96774 26.5741 9.95975 25.1821 12.4077 23.8381C13.8477 23.0221 15.2877 22.2541 16.7277 21.5341C18.2157 20.8141 19.5837 20.0461 20.8317 19.2301C22.1277 18.4141 23.1597 17.5261 23.9277 16.5661C24.6957 15.5581 25.0797 14.4061 25.0797 13.1101C25.0797 12.0061 24.7437 10.9501 24.0717 9.94213C23.4477 8.88613 22.4877 8.04613 21.1917 7.42213C19.9437 6.75013 18.3837 6.41413 16.5117 6.41413C15.0717 6.41413 13.7517 6.60613 12.5517 6.99012C11.3997 7.37413 10.3437 7.87813 9.38374 8.50212C8.47175 9.07813 7.65575 9.70213 6.93575 10.3741C6.26375 10.9981 5.68774 11.5741 5.20775 12.1021L1.24774 7.63812C1.63174 7.20612 2.27974 6.63012 3.19174 5.91012C4.10374 5.14212 5.25574 4.37412 6.64774 3.60612C8.03974 2.83812 9.64774 2.19013 11.4717 1.66213C13.3437 1.08613 15.3837 0.798125 17.5917 0.798125C20.5677 0.798125 23.1117 1.32613 25.2237 2.38213C27.3837 3.39012 29.0397 4.78212 30.1917 6.55812C31.3437 8.28612 31.9197 10.2301 31.9197 12.3901C31.9197 14.2621 31.5117 15.8941 30.6957 17.2861C29.9277 18.6781 28.9197 19.9021 27.6717 20.9581C26.4717 22.0141 25.1997 22.9261 23.8557 23.6941C22.5597 24.4141 21.3837 25.0381 20.3277 25.5661C18.1677 26.6221 16.3197 27.5821 14.7837 28.4461C13.2477 29.3101 11.9757 30.1741 10.9677 31.0381C10.0077 31.8541 9.21575 32.7181 8.59175 33.6301C8.01575 34.5421 7.58374 35.6221 7.29575 36.8701H32.7117V42.6301H0.671745ZM41.435 48.4621L42.875 42.0541H40.715V34.5661H46.691V42.0541L44.531 48.4621H41.435ZM53.8865 19.1581C53.8865 15.8941 54.6785 12.9421 56.2625 10.3021C57.8945 7.61413 60.1025 5.47813 62.8865 3.89412C65.6705 2.31012 68.7665 1.51812 72.1745 1.51812C75.8705 1.51812 79.0865 2.40612 81.8225 4.18212C84.6065 5.91012 86.7665 8.43013 88.3025 11.7421C89.8865 15.0061 90.6785 18.9421 90.6785 23.5501C90.6785 30.2701 89.8865 35.8621 88.3025 40.3261C86.7185 44.7901 84.4865 48.1261 81.6065 50.3341C78.7265 52.5901 75.3665 53.7181 71.5265 53.7181C68.2145 53.7181 65.1905 52.9021 62.4545 51.2701C59.7665 49.6861 57.6545 47.4781 56.1185 44.6461L60.0065 40.8301C61.0625 43.0381 62.6225 44.8141 64.6865 46.1581C66.7985 47.5021 69.1025 48.1741 71.5985 48.1741C74.2385 48.1741 76.5185 47.3821 78.4385 45.7981C80.4065 44.2141 81.9185 41.9341 82.9745 38.9581C84.0785 35.9821 84.6545 32.3821 84.7025 28.1581C84.0305 29.7901 83.0225 31.2301 81.6785 32.4781C80.3825 33.7261 78.8705 34.6861 77.1425 35.3581C75.4145 36.0301 73.5425 36.3661 71.5265 36.3661C68.2625 36.3661 65.2865 35.5981 62.5985 34.0621C59.9105 32.5261 57.7745 30.4621 56.1905 27.8701C54.6545 25.2781 53.8865 22.3741 53.8865 19.1581ZM72.1025 6.99012C69.8945 6.99012 67.8545 7.54212 65.9825 8.64612C64.1585 9.75012 62.6945 11.2141 61.5905 13.0381C60.4865 14.8621 59.9345 16.9021 59.9345 19.1581C59.9345 21.3661 60.4865 23.3821 61.5905 25.2061C62.6945 27.0301 64.1585 28.4941 65.9825 29.5981C67.8545 30.7021 69.8945 31.2541 72.1025 31.2541C74.3585 31.2541 76.3985 30.7021 78.2225 29.5981C80.0465 28.4941 81.5105 27.0301 82.6145 25.2061C83.7185 23.3821 84.2705 21.3661 84.2705 19.1581C84.2705 16.9501 83.7185 14.9341 82.6145 13.1101C81.5105 11.2381 80.0225 9.75012 78.1505 8.64612C76.3265 7.54212 74.3105 6.99012 72.1025 6.99012ZM124.365 36.8701V42.6301H98.5169V36.8701H108.741V8.79012C108.309 9.36612 107.637 9.99012 106.725 10.6621C105.813 11.2861 104.781 11.8861 103.629 12.4621C102.477 13.0381 101.325 13.5181 100.173 13.9021C99.0209 14.2381 97.9649 14.4061 97.0049 14.4061V8.35813C98.0609 8.35813 99.2129 8.07013 100.461 7.49412C101.757 6.87012 103.005 6.15012 104.205 5.33413C105.405 4.51813 106.413 3.75013 107.229 3.03013C108.093 2.31013 108.597 1.80613 108.741 1.51812H115.221V36.8701H124.365ZM128.699 19.1581C128.699 15.8941 129.491 12.9421 131.075 10.3021C132.707 7.61413 134.915 5.47813 137.699 3.89412C140.483 2.31012 143.579 1.51812 146.987 1.51812C150.683 1.51812 153.899 2.40612 156.635 4.18212C159.419 5.91012 161.579 8.43013 163.115 11.7421C164.699 15.0061 165.491 18.9421 165.491 23.5501C165.491 30.2701 164.699 35.8621 163.115 40.3261C161.531 44.7901 159.299 48.1261 156.419 50.3341C153.539 52.5901 150.179 53.7181 146.339 53.7181C143.027 53.7181 140.003 52.9021 137.267 51.2701C134.579 49.6861 132.467 47.4781 130.931 44.6461L134.819 40.8301C135.875 43.0381 137.435 44.8141 139.499 46.1581C141.611 47.5021 143.915 48.1741 146.411 48.1741C149.051 48.1741 151.331 47.3821 153.251 45.7981C155.219 44.2141 156.731 41.9341 157.787 38.9581C158.891 35.9821 159.467 32.3821 159.515 28.1581C158.843 29.7901 157.835 31.2301 156.491 32.4781C155.195 33.7261 153.683 34.6861 151.955 35.3581C150.227 36.0301 148.355 36.3661 146.339 36.3661C143.075 36.3661 140.099 35.5981 137.411 34.0621C134.723 32.5261 132.587 30.4621 131.003 27.8701C129.467 25.2781 128.699 22.3741 128.699 19.1581ZM146.915 6.99012C144.707 6.99012 142.667 7.54212 140.795 8.64612C138.971 9.75012 137.507 11.2141 136.403 13.0381C135.299 14.8621 134.747 16.9021 134.747 19.1581C134.747 21.3661 135.299 23.3821 136.403 25.2061C137.507 27.0301 138.971 28.4941 140.795 29.5981C142.667 30.7021 144.707 31.2541 146.915 31.2541C149.171 31.2541 151.211 30.7021 153.035 29.5981C154.859 28.4941 156.323 27.0301 157.427 25.2061C158.531 23.3821 159.083 21.3661 159.083 19.1581C159.083 16.9501 158.531 14.9341 157.427 13.1101C156.323 11.2381 154.835 9.75012 152.963 8.64612C151.139 7.54212 149.123 6.99012 146.915 6.99012ZM173.833 48.4621L175.273 42.0541H173.113V34.5661H179.089V42.0541L176.929 48.4621H173.833ZM202.557 53.3581C198.909 53.3581 195.621 52.4941 192.693 50.7661C189.765 49.0381 187.557 46.7341 186.069 43.8541L190.029 40.3981C191.373 42.6061 193.149 44.3821 195.357 45.7261C197.613 47.0701 200.037 47.7421 202.629 47.7421C204.837 47.7421 206.805 47.2621 208.533 46.3021C210.261 45.3421 211.629 44.0221 212.637 42.3421C213.645 40.6141 214.149 38.6461 214.149 36.4381C214.149 34.2781 213.645 32.3821 212.637 30.7501C211.677 29.1181 210.357 27.8461 208.677 26.9341C207.045 26.0221 205.197 25.5661 203.133 25.5661C201.069 25.5661 199.125 26.0221 197.301 26.9341C195.525 27.8461 194.061 29.1421 192.909 30.8221H187.221L192.981 1.51812H217.821V7.35013H197.661L194.565 23.6221C195.621 22.5181 196.941 21.6541 198.525 21.0301C200.157 20.3581 201.957 20.0221 203.925 20.0221C207.093 20.0221 209.925 20.7181 212.421 22.1101C214.965 23.5021 216.957 25.4221 218.397 27.8701C219.885 30.3181 220.629 33.1501 220.629 36.3661C220.629 39.7261 219.813 42.6781 218.181 45.2221C216.597 47.8141 214.437 49.8061 211.701 51.1981C208.965 52.6381 205.917 53.3581 202.557 53.3581ZM226.234 42.6301C226.234 40.7101 226.378 38.9101 226.666 37.2301C227.002 35.5501 227.578 33.9421 228.394 32.4061C229.258 30.8701 230.458 29.4061 231.994 28.0141C233.53 26.5741 235.522 25.1821 237.97 23.8381C239.41 23.0221 240.85 22.2541 242.29 21.5341C243.778 20.8141 245.146 20.0461 246.394 19.2301C247.69 18.4141 248.722 17.5261 249.49 16.5661C250.258 15.5581 250.642 14.4061 250.642 13.1101C250.642 12.0061 250.306 10.9501 249.634 9.94213C249.01 8.88613 248.05 8.04613 246.754 7.42213C245.506 6.75013 243.946 6.41413 242.074 6.41413C240.634 6.41413 239.314 6.60613 238.114 6.99012C236.962 7.37413 235.906 7.87813 234.946 8.50212C234.034 9.07813 233.218 9.70213 232.498 10.3741C231.826 10.9981 231.25 11.5741 230.77 12.1021L226.81 7.63812C227.194 7.20612 227.842 6.63012 228.754 5.91012C229.666 5.14212 230.818 4.37412 232.21 3.60612C233.602 2.83812 235.21 2.19013 237.034 1.66213C238.906 1.08613 240.946 0.798125 243.154 0.798125C246.13 0.798125 248.674 1.32613 250.786 2.38213C252.946 3.39012 254.602 4.78212 255.754 6.55812C256.906 8.28612 257.482 10.2301 257.482 12.3901C257.482 14.2621 257.074 15.8941 256.258 17.2861C255.49 18.6781 254.482 19.9021 253.234 20.9581C252.034 22.0141 250.762 22.9261 249.418 23.6941C248.122 24.4141 246.946 25.0381 245.89 25.5661C243.73 26.6221 241.882 27.5821 240.346 28.4461C238.81 29.3101 237.538 30.1741 236.53 31.0381C235.57 31.8541 234.778 32.7181 234.154 33.6301C233.578 34.5421 233.146 35.6221 232.858 36.8701H258.274V42.6301H226.234ZM292.341 36.8701V42.6301H266.493V36.8701H276.717V8.79012C276.285 9.36612 275.613 9.99012 274.701 10.6621C273.789 11.2861 272.757 11.8861 271.605 12.4621C270.453 13.0381 269.301 13.5181 268.149 13.9021C266.997 14.2381 265.941 14.4061 264.981 14.4061V8.35813C266.037 8.35813 267.189 8.07013 268.437 7.49412C269.733 6.87012 270.981 6.15012 272.181 5.33413C273.381 4.51813 274.389 3.75013 275.205 3.03013C276.069 2.31013 276.573 1.80613 276.717 1.51812H283.197V36.8701H292.341Z"
+                                        fill="#E3A476" />
+                                </svg>
+                            </h4>
+                            <h2 class="text-[#124838] font-bold mt-3 text-[30px]">Plants Delivered</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column align-items-center justify-center">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/Counter_2.png.png" alt="">
+
+                            </div>
+                            <h4 class="text-[#E3A476] text-center text-xl font-bold"><svg width="200" height="54"
+                                    viewBox="0 0 200 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M28.0804 45.8701V51.6301H2.23239V45.8701H12.4564V17.7901C12.0244 18.3661 11.3524 18.9901 10.4404 19.6621C9.52839 20.2861 8.49639 20.8861 7.34439 21.4621C6.19239 22.0381 5.04039 22.5181 3.88839 22.9021C2.73639 23.2381 1.68039 23.4061 0.720394 23.4061V17.3581C1.77639 17.3581 2.92839 17.0701 4.17639 16.4941C5.47239 15.8701 6.72039 15.1501 7.92039 14.3341C9.12039 13.5181 10.1284 12.7501 10.9444 12.0301C11.8084 11.3101 12.3124 10.8061 12.4564 10.5181H18.9364V45.8701H28.0804ZM60.4945 45.8701V51.6301H34.6465V45.8701H44.8705V17.7901C44.4385 18.3661 43.7665 18.9901 42.8545 19.6621C41.9425 20.2861 40.9105 20.8861 39.7585 21.4621C38.6065 22.0381 37.4545 22.5181 36.3025 22.9021C35.1505 23.2381 34.0945 23.4061 33.1345 23.4061V17.3581C34.1905 17.3581 35.3425 17.0701 36.5905 16.4941C37.8865 15.8701 39.1345 15.1501 40.3345 14.3341C41.5345 13.5181 42.5425 12.7501 43.3585 12.0301C44.2225 11.3101 44.7265 10.8061 44.8705 10.5181H51.3505V45.8701H60.4945ZM67.5645 57.4621L69.0045 51.0541H66.8445V43.5661H72.8205V51.0541L70.6605 57.4621H67.5645ZM96.288 62.3581C92.64 62.3581 89.352 61.4941 86.424 59.7661C83.496 58.0381 81.288 55.7341 79.8 52.8541L83.76 49.3981C85.104 51.6061 86.88 53.3821 89.088 54.7261C91.344 56.0701 93.768 56.7421 96.36 56.7421C98.568 56.7421 100.536 56.2621 102.264 55.3021C103.992 54.3421 105.36 53.0221 106.368 51.3421C107.376 49.6141 107.88 47.6461 107.88 45.4381C107.88 43.2781 107.376 41.3821 106.368 39.7501C105.408 38.1181 104.088 36.8461 102.408 35.9341C100.776 35.0221 98.928 34.5661 96.864 34.5661C94.8 34.5661 92.856 35.0221 91.032 35.9341C89.256 36.8461 87.792 38.1421 86.64 39.8221H80.952L86.712 10.5181H111.552V16.3501H91.392L88.296 32.6221C89.352 31.5181 90.672 30.6541 92.256 30.0301C93.888 29.3581 95.688 29.0221 97.656 29.0221C100.824 29.0221 103.656 29.7181 106.152 31.1101C108.696 32.5021 110.688 34.4221 112.128 36.8701C113.616 39.3181 114.36 42.1501 114.36 45.3661C114.36 48.7261 113.544 51.6781 111.912 54.2221C110.328 56.8141 108.168 58.8061 105.432 60.1981C102.696 61.6381 99.648 62.3581 96.288 62.3581ZM157.333 34.7101C157.333 37.9741 156.517 40.9501 154.885 43.6381C153.301 46.2781 151.117 48.3901 148.333 49.9741C145.597 51.5581 142.501 52.3501 139.045 52.3501C135.397 52.3501 132.181 51.4861 129.397 49.7581C126.613 47.9821 124.429 45.4381 122.845 42.1261C121.309 38.8141 120.541 34.8781 120.541 30.3181C120.541 23.5981 121.333 18.0061 122.917 13.5421C124.501 9.07812 126.733 5.74212 129.613 3.53412C132.493 1.27812 135.853 0.150125 139.693 0.150125C143.005 0.150125 146.005 0.966124 148.693 2.59812C151.429 4.18213 153.565 6.39013 155.101 9.22212L151.213 13.0381C150.157 10.7821 148.597 9.00613 146.533 7.71013C144.469 6.36613 142.165 5.69413 139.621 5.69413C137.029 5.69413 134.749 6.48613 132.781 8.07013C130.813 9.65413 129.277 11.9341 128.173 14.9101C127.117 17.8861 126.565 21.4861 126.517 25.7101C127.237 24.0301 128.245 22.5901 129.541 21.3901C130.837 20.1421 132.349 19.1821 134.077 18.5101C135.853 17.8381 137.725 17.5021 139.693 17.5021C143.005 17.5021 145.981 18.2701 148.621 19.8061C151.309 21.3421 153.421 23.4061 154.957 25.9981C156.541 28.5901 157.333 31.4941 157.333 34.7101ZM139.117 46.8781C141.325 46.8781 143.341 46.3261 145.165 45.2221C147.037 44.1181 148.525 42.6541 149.629 40.8301C150.733 38.9581 151.285 36.9181 151.285 34.7101C151.285 32.5021 150.733 30.4861 149.629 28.6621C148.525 26.8381 147.037 25.3741 145.165 24.2701C143.341 23.1661 141.325 22.6141 139.117 22.6141C136.909 22.6141 134.869 23.1661 132.997 24.2701C131.173 25.3741 129.709 26.8381 128.605 28.6621C127.501 30.4861 126.949 32.5021 126.949 34.7101C126.949 36.9181 127.501 38.9581 128.605 40.8301C129.709 42.6541 131.173 44.1181 132.997 45.2221C134.869 46.3261 136.909 46.8781 139.117 46.8781ZM163.125 28.1581C163.125 24.8941 163.917 21.9421 165.501 19.3021C167.133 16.6141 169.341 14.4781 172.125 12.8941C174.909 11.3101 178.005 10.5181 181.413 10.5181C185.109 10.5181 188.325 11.4061 191.061 13.1821C193.845 14.9101 196.005 17.4301 197.541 20.7421C199.125 24.0061 199.917 27.9421 199.917 32.5501C199.917 39.2701 199.125 44.8621 197.541 49.3261C195.957 53.7901 193.725 57.1261 190.845 59.3341C187.965 61.5901 184.605 62.7181 180.765 62.7181C177.453 62.7181 174.429 61.9021 171.693 60.2701C169.005 58.6861 166.893 56.4781 165.357 53.6461L169.245 49.8301C170.301 52.0381 171.861 53.8141 173.925 55.1581C176.037 56.5021 178.341 57.1741 180.837 57.1741C183.477 57.1741 185.757 56.3821 187.677 54.7981C189.645 53.2141 191.157 50.9341 192.213 47.9581C193.317 44.9821 193.893 41.3821 193.941 37.1581C193.269 38.7901 192.261 40.2301 190.917 41.4781C189.621 42.7261 188.109 43.6861 186.381 44.3581C184.653 45.0301 182.781 45.3661 180.765 45.3661C177.501 45.3661 174.525 44.5981 171.837 43.0621C169.149 41.5261 167.013 39.4621 165.429 36.8701C163.893 34.2781 163.125 31.3741 163.125 28.1581ZM181.341 15.9901C179.133 15.9901 177.093 16.5421 175.221 17.6461C173.397 18.7501 171.933 20.2141 170.829 22.0381C169.725 23.8621 169.173 25.9021 169.173 28.1581C169.173 30.3661 169.725 32.3821 170.829 34.2061C171.933 36.0301 173.397 37.4941 175.221 38.5981C177.093 39.7021 179.133 40.2541 181.341 40.2541C183.597 40.2541 185.637 39.7021 187.461 38.5981C189.285 37.4941 190.749 36.0301 191.853 34.2061C192.957 32.3821 193.509 30.3661 193.509 28.1581C193.509 25.9501 192.957 23.9341 191.853 22.1101C190.749 20.2381 189.261 18.7501 187.389 17.6461C185.565 16.5421 183.549 15.9901 181.341 15.9901Z"
+                                        fill="#E3A476" />
+                                </svg>
+                            </h4>
+                            <h2 class="text-[#124838] font-bold mt-3 text-[30px]">Happy customers</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column align-items-center justify-center">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/Counter_3.png.png" alt="">
+
+                            </div>
+                            <h4 class="text-[#E3A476] text-center text-xl font-bold"><svg width="150" height="53"
+                                    viewBox="0 0 150 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.982894 51.6301C0.982894 49.7101 1.12689 47.9101 1.41489 46.2301C1.75089 44.5501 2.32689 42.9421 3.14289 41.4061C4.00689 39.8701 5.20689 38.4061 6.74289 37.0141C8.27889 35.5741 10.2709 34.1821 12.7189 32.8381C14.1589 32.0221 15.5989 31.2541 17.0389 30.5341C18.5269 29.8141 19.8949 29.0461 21.1429 28.2301C22.4389 27.4141 23.4709 26.5261 24.2389 25.5661C25.0069 24.5581 25.3909 23.4061 25.3909 22.1101C25.3909 21.0061 25.0549 19.9501 24.3829 18.9421C23.7589 17.8861 22.7989 17.0461 21.5029 16.4221C20.2549 15.7501 18.6949 15.4141 16.8229 15.4141C15.3829 15.4141 14.0629 15.6061 12.8629 15.9901C11.7109 16.3741 10.6549 16.8781 9.69489 17.5021C8.78289 18.0781 7.96689 18.7021 7.24689 19.3741C6.57489 19.9981 5.99889 20.5741 5.51889 21.1021L1.55889 16.6381C1.94289 16.2061 2.59089 15.6301 3.50289 14.9101C4.41489 14.1421 5.56689 13.3741 6.95889 12.6061C8.35089 11.8381 9.95889 11.1901 11.7829 10.6621C13.6549 10.0861 15.6949 9.79812 17.9029 9.79812C20.8789 9.79812 23.4229 10.3261 25.5349 11.3821C27.6949 12.3901 29.3509 13.7821 30.5029 15.5581C31.6549 17.2861 32.2309 19.2301 32.2309 21.3901C32.2309 23.2621 31.8229 24.8941 31.0069 26.2861C30.2389 27.6781 29.2309 28.9021 27.9829 29.9581C26.7829 31.0141 25.5109 31.9261 24.1669 32.6941C22.8709 33.4141 21.6949 34.0381 20.6389 34.5661C18.4789 35.6221 16.6309 36.5821 15.0949 37.4461C13.5589 38.3101 12.2869 39.1741 11.2789 40.0381C10.3189 40.8541 9.52689 41.7181 8.9029 42.6301C8.32689 43.5421 7.89489 44.6221 7.60689 45.8701H33.0229V51.6301H0.982894ZM76.8821 34.7101C76.8821 37.9741 76.0661 40.9501 74.4341 43.6381C72.8501 46.2781 70.6661 48.3901 67.8821 49.9741C65.1461 51.5581 62.0501 52.3501 58.5941 52.3501C54.9461 52.3501 51.7301 51.4861 48.9461 49.7581C46.1621 47.9821 43.9781 45.4381 42.3941 42.1261C40.8581 38.8141 40.0901 34.8781 40.0901 30.3181C40.0901 23.5981 40.8821 18.0061 42.4661 13.5421C44.0501 9.07812 46.2821 5.74212 49.1621 3.53412C52.0421 1.27812 55.4021 0.150125 59.2421 0.150125C62.5541 0.150125 65.5541 0.966124 68.2421 2.59812C70.9781 4.18213 73.1141 6.39013 74.6501 9.22212L70.7621 13.0381C69.7061 10.7821 68.1461 9.00613 66.0821 7.71013C64.0181 6.36613 61.7141 5.69413 59.1701 5.69413C56.5781 5.69413 54.2981 6.48613 52.3301 8.07013C50.3621 9.65413 48.8261 11.9341 47.7221 14.9101C46.6661 17.8861 46.1141 21.4861 46.0661 25.7101C46.7861 24.0301 47.7941 22.5901 49.0901 21.3901C50.3861 20.1421 51.8981 19.1821 53.6261 18.5101C55.4021 17.8381 57.2741 17.5021 59.2421 17.5021C62.5541 17.5021 65.5301 18.2701 68.1701 19.8061C70.8581 21.3421 72.9701 23.4061 74.5061 25.9981C76.0901 28.5901 76.8821 31.4941 76.8821 34.7101ZM58.6661 46.8781C60.8741 46.8781 62.8901 46.3261 64.7141 45.2221C66.5861 44.1181 68.0741 42.6541 69.1781 40.8301C70.2821 38.9581 70.8341 36.9181 70.8341 34.7101C70.8341 32.5021 70.2821 30.4861 69.1781 28.6621C68.0741 26.8381 66.5861 25.3741 64.7141 24.2701C62.8901 23.1661 60.8741 22.6141 58.6661 22.6141C56.4581 22.6141 54.4181 23.1661 52.5461 24.2701C50.7221 25.3741 49.2581 26.8381 48.1541 28.6621C47.0501 30.4861 46.4981 32.5021 46.4981 34.7101C46.4981 36.9181 47.0501 38.9581 48.1541 40.8301C49.2581 42.6541 50.7221 44.1181 52.5461 45.2221C54.4181 46.3261 56.4581 46.8781 58.6661 46.8781ZM119.61 37.1581C119.61 40.1821 118.77 42.8221 117.09 45.0781C115.458 47.3341 113.25 49.0861 110.466 50.3341C107.73 51.5821 104.73 52.2061 101.466 52.2061C98.0582 52.2061 95.0102 51.5341 92.3222 50.1901C89.6342 48.7981 87.4982 46.9501 85.9142 44.6461C84.3782 42.3421 83.6102 39.7501 83.6102 36.8701C83.6102 34.7581 84.0902 32.8621 85.0502 31.1821C86.0102 29.5021 87.2102 28.0861 88.6502 26.9341C90.1382 25.7341 91.6502 24.8461 93.1862 24.2701C91.7942 23.6461 90.4982 22.8301 89.2982 21.8221C88.0982 20.8141 87.1382 19.6381 86.4182 18.2941C85.6982 16.9501 85.3382 15.4861 85.3382 13.9021C85.3382 11.7421 85.8182 9.84613 86.7782 8.21412C87.7382 6.53413 89.0102 5.11812 90.5942 3.96612C92.1782 2.81412 93.9302 1.95012 95.8502 1.37413C97.7702 0.798125 99.6902 0.510124 101.61 0.510124C103.53 0.510124 105.45 0.798125 107.37 1.37413C109.29 1.95012 111.042 2.81412 112.626 3.96612C114.258 5.07012 115.554 6.46212 116.514 8.14212C117.474 9.77412 117.954 11.6701 117.954 13.8301C117.954 15.4141 117.594 16.9021 116.874 18.2941C116.154 19.6381 115.17 20.8141 113.922 21.8221C112.722 22.8301 111.402 23.6461 109.962 24.2701C111.69 24.9421 113.274 25.9021 114.714 27.1501C116.202 28.3501 117.378 29.7901 118.242 31.4701C119.154 33.1501 119.61 35.0461 119.61 37.1581ZM113.202 36.7261C113.202 35.1901 112.866 33.8221 112.194 32.6221C111.522 31.3741 110.61 30.3421 109.458 29.5261C108.306 28.6621 107.034 28.0141 105.642 27.5821C104.298 27.1501 102.93 26.9341 101.538 26.9341C99.6182 26.9341 97.7702 27.3421 95.9942 28.1581C94.2662 28.9741 92.8502 30.1261 91.7462 31.6141C90.6422 33.0541 90.0902 34.7821 90.0902 36.7981C90.0902 38.2861 90.4262 39.6301 91.0982 40.8301C91.7702 42.0301 92.6582 43.0621 93.7622 43.9261C94.9142 44.7901 96.1622 45.4381 97.5062 45.8701C98.8982 46.3021 100.29 46.5181 101.682 46.5181C103.602 46.5181 105.426 46.1101 107.154 45.2941C108.93 44.4781 110.37 43.3261 111.474 41.8381C112.626 40.3501 113.202 38.6461 113.202 36.7261ZM91.7462 14.1181C91.7462 15.7981 92.2502 17.2381 93.2582 18.4381C94.2662 19.6381 95.5382 20.5501 97.0742 21.1741C98.6102 21.7501 100.122 22.0381 101.61 22.0381C103.146 22.0381 104.658 21.7261 106.146 21.1021C107.682 20.4781 108.954 19.5661 109.962 18.3661C110.97 17.1661 111.474 15.7021 111.474 13.9741C111.474 12.3421 110.994 10.9501 110.034 9.79812C109.122 8.64613 107.898 7.75813 106.362 7.13412C104.874 6.51012 103.266 6.19812 101.538 6.19812C99.8582 6.19812 98.2502 6.53412 96.7142 7.20612C95.2262 7.83012 94.0262 8.74212 93.1142 9.94212C92.2022 11.0941 91.7462 12.4861 91.7462 14.1181ZM149.465 23.4781V28.6621H140.969V37.8781H135.209V28.6621H126.713V23.4781H135.209V14.2621H140.969V23.4781H149.465Z"
+                                        fill="#E3A476" />
+                                </svg>
+                            </h4>
+                            <h2 class="text-[#124838] font-bold mt-3 text-[30px]">Growing Catalog</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-28">
+            <div class="container-fluid container-xxl">
+                <h4 class="text-[#124838] font-bold">About us</h4>
+                <h1 class="fs-1 mb-4 text-[#E3A476]">our Core team
+                    and their philosophy</h1>
+                <div class="row gy-5">
+                    <div class="col-md-6 col-12">
+                        <div class="">
+                            <p class="mb-0">In Aranyak, we have a great team to help you manage and maintain all
+                                your
+                                healthy plants simultaneously. We help you to change your outlook on life
+                                with our huge collection of greenery. Refer to our collection of plants for
+                                indoor and outdoor vegetation and beautification.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="">
+                            <p class="mb-0">In Aranyak, we have a great team to help you manage and maintain all
+                                your
+                                healthy plants simultaneously. We help you to change your outlook on life
+                                with our huge collection of greenery. Refer to our collection of plants for
+                                indoor and outdoor vegetation and beautification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid container-xxl mt-20 ">
+                <div class="d-flex justify-center position-relative ">
+                    <div class="d-flex align-items-center justify-content-end">
+
+                        <img class="w-100 h-100" src="./image/Section → badhon.png.png" alt="">
+                        <div class="position-absolute e3 bg-light p-3 rounded-4 border border-warning w-25 ">
+                            <h3>Meet Badhon</h3>
+                            <p>Dhruba Badhon lives in Dhaka with her
+                                husband, Raihan Nil, their daughter, Shimul
+                                and two cats, Pantha and Sanji. She began
+                                her professional carrier at a scam house
+                                named Hexit. At the summer of 2069, she…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-center w-100 mt-20">
+                    <h3 class="font-bold text-[#E3A476] md:text-[40px] text-xxl">Meet the team</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-10">
+            <div class="container-fluid container-xxl">
+                <div class="row g-5">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/6.png.png" alt="">
+                            </div>
+                            <p class="mb-0 text-[#124838] font-bold">James T. Kirk</p>
+                            <p class="mb-0">CFO</p>
+                            <p class="w-50 text-center">We're trying to teach you a
+                                technique here and how to use it.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/5.png.png" alt="">
+                            </div>
+                            <p class="mb-0 text-[#124838] font-bold">Montgomery Scott</p>
+                            <p class="mb-0">CFO</p>
+                            <p class="w-100 text-center">Just make a decision and let it go.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/4.png.png" alt="">
+                            </div>
+                            <p class="mb-0 text-[#124838] font-bold">Nyota Uhura</p>
+                            <p class="mb-0">CFO</p>
+                            <p class="w-50 text-center">We'll throw some old gray clouds in
+                                here just sneaking around....</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/3.png.png" alt="">
+                            </div>
+                            <p class="mb-0 text-[#124838] font-bold">Hikaru Sulu</p>
+                            <p class="mb-0">CFO</p>
+                            <p class="w-75 text-center">Everything's not great in life, but we
+                                can still find beauty in it.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/2.png.png" alt="">
+                            </div>
+                            <p class="mb-0 text-[#124838] font-bold">JPavel Chekov</p>
+                            <p class="mb-0">CFO</p>
+                            <p class="w-75 text-center">That is when you can experience
+                                true joy, when you have no fear..</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="d-flex flex-column align-items-center gap-1">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/1.png.png" alt="">
+                            </div>
+                            <p class="mb-0 text-[#124838] font-bold">Human resource</p>
+                            <p class="mb-0">CFO</p>
+                            <p class="w-100 text-center">Let's make a nice big leafy tree..</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 mb-5">
+            <div class="container-fluid container-xxl">
+                <h4 class="text-[#124838] mb-3">Our Products</h4>
+                <h1 class="fs-1 text-[#E3A476]">New Arrivals</h1>
+            </div>
+            <div class="container-fluid container-xxl">
+                <div class="row mt-4 g-4">
+                    <div class="col-lg-4 col-sm-6 col-12 rounded-5">
+                        <div class="card border-0 rounded-5">
+                            <div class="card-img rounded-5">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/div.product-card-top.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4 card-body bg-ohhh/50 ">
+                                <h3 class=" text-center  mb-3 text-green-600 font-bold ">Philodendron</h3>
+                                <p>The Philodendron White Princess has been
+                                    around for some time in private
+                                    collections. But they have hit the market…</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card border-0 rounded-4">
+                            <div class="card-img rounded-4">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/88.jpg" alt="">
+                            </div>
+                            <div class="rounded-bottom-4  card-body bg-ohhh/65">
+                                <h3 class="text-center mb-3 text-green-600 font-bold">Monstera Obliqua Peruvian</h3>
+                                <p>The Philodendron White Princess has been
+                                    around for some time in private
+                                    collections. But they have hit the market…</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card border-0 rounded-4">
+                            <div class="card-img rounded-4">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/67.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4  card-body bg-ohhh/65">
+                                <h3 class="text-center mb-3 text-green-600 font-bold">Norfolk Island Pine</h3>
+                                <p>The Philodendron White Princess has been
+                                    around for some time in private
+                                    collections. But they have hit the market…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="container-fluid container-xxl">
+
+                <h1 class="text-end fs-1 fw-bold text-[#E3A476]">Popularlittle plants </h1>
+            </div>
+            <div class="mt-4 container-fluid container-xxl">
+                <div class="row mt-4 g-4">
+                    <div class="col-lg-4 col-sm-6 col-12 rounded-5">
+                        <div class="card border-0 rounded-5">
+                            <div class="card-img rounded-5">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/bn.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4 card-body bg-ohhh/65 ">
+                                <h3 class=" text-center  mb-3 text-green-600 font-bold ">Snake/Sansevieria</h3>
+                                <p>Sansevierias are succulent plants. they
+                                    have strong, stiff, succulent leaves that
+                                    store water. these plants release oxygen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card border-0 rounded-4">
+                            <div class="card-img rounded-4">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/op.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4  card-body bg-ohhh/50">
+                                <h3 class="text-center mb-3 text-green-600 font-bold">Bromeliad Aechmea Pink</h3>
+                                <p class="line-clamp-4">Featuring colorful, long-lasting blooms,
+                                    the Bromeliad Aechmea Pink is a unique
+                                    flowering plant to add a touch of tropics…</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card border-0 rounded-4">
+                            <div class="card-img rounded-4">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/yu.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4  card-body bg-ohhh/50">
+                                <h3 class="text-center mb-3 text-green-600 font-bold">Parlor Palm</h3>
+                                <p>The parlor palm (Chamaedorea elegans)
+                                    has long been used as an indoor plant.
+                                    NASA gave this plant a high purifying…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container-fluid container-xxl">
+
+                <h1 class=" fs-1 fw-bold text-[#E3A476]">Easy to care plants</h1>
+            </div>
+            <div class="mt-4 container-fluid container-xxl">
+                <div class="row mt-4 g-4">
+                    <div class="col-lg-4 col-sm-6 col-12 rounded-5">
+                        <div class="card border-0 rounded-5">
+                            <div class="card-img rounded-5">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/q1.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4 card-body bg-ohhh/50 ">
+                                <h3 class=" text-center  mb-3 text-green-600 font-bold ">Snake/Sansevieria</h3>
+                                <p>Sansevierias are succulent plants. they
+                                    have strong, stiff, succulent leaves that
+                                    store water. these plants release oxygen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card border-0 rounded-4">
+                            <div class="card-img rounded-4">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/q2.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4  card-body bg-ohhh/65">
+                                <h3 class="text-center mb-3 text-green-600 font-bold">Bromeliad Aechmea Pink</h3>
+                                <p class="line-clamp-4">Featuring colorful, long-lasting blooms,
+                                    the Bromeliad Aechmea Pink is a unique
+                                    flowering plant to add a touch of tropics…</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card border-0 rounded-4">
+                            <div class="card-img rounded-4">
+                                <img class="w-100 h-100 rounded-top-5" src="./image/q3.png" alt="">
+                            </div>
+                            <div class="rounded-bottom-4  card-body bg-ohhh/65">
+                                <h3 class="text-center mb-3 text-green-600 font-bold">Parlor Palm</h3>
+                                <p>The parlor palm (Chamaedorea elegans)
+                                    has long been used as an indoor plant.
+                                    NASA gave this plant a high purifying…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid container-xxl mt-5">
+                <div class="d-flex justify-center">
+                    <button class="boooo d-flex align-items-center gap-2 p-2 px-4 rounded-pill">
+                        <a class="text-light" href="">see full catalog</a>
+                        <svg width="21" height="31" viewBox="0 0 21 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_25)">
+                                <path
+                                    d="M10.78 14.955C10.74 14.8484 10.68 14.755 10.6 14.675L6.44 10.515C6.28 10.355 6.08333 10.2717 5.85 10.265C5.61666 10.2584 5.41666 10.3384 5.25 10.505C5.08333 10.6717 5 10.8717 5 11.105C5 11.3384 5.08 11.535 5.24 11.695L8 14.435H1.68C1.45333 14.435 1.25666 14.5184 1.09 14.685C0.92333 14.8517 0.839996 15.0484 0.839996 15.275C0.839996 15.5017 0.92333 15.6984 1.09 15.865C1.25666 16.0317 1.45333 16.115 1.68 16.115H8L5.24 18.855C5.08 19.015 5 19.2117 5 19.445C5 19.6784 5.08 19.8784 5.24 20.045C5.4 20.2117 5.6 20.295 5.84 20.295C6.08 20.295 6.28 20.2084 6.44 20.035L10.6 15.875C10.68 15.795 10.74 15.7017 10.78 15.595C10.8733 15.3817 10.8733 15.1684 10.78 14.955Z"
+                                    fill="white"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_25">
+                                    <rect width="20" height="20" fill="white"
+                                        transform="matrix(1 0 0 -1 0.839996 25.275)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="container-fluid container-xxl">
+                <h4 class="text-[#124838] mb-3">review</h4>
+                <h1 class="fs-1 font-semibold text-[#E3A476]">Some words from
+                  <span class="font-bold">  our Lovely customers</span></h1>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="container-fluid container-xxl">
+                <div class="container-fluid container-xxl">
+
+                    <div class="row align-items-center justify-content-between ">
+                        <div class="col-lg-5 col-12">
+                            <div class="d-flex p-3 rounded-4 mb-4 flex-column gap-3 bg-ohhh/50  ">
+                                <div class="d-flex gap-1">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                </div>
+                                <p class="mb-0">I’m not really a customer of this site, but their free gardening
+                                    guide helped me a lot. Thank you ...</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="">
+                                        <img src="./image/34444.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h4>Ahsoka Tano</h4>
+                                        <span>Firefighter</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex p-3 rounded-4 mb-4 flex-column gap-3 bg-ohhh/50  ">
+                                <div class="d-flex gap-1">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                </div>
+                                <p class="mb-0">I’m not really a customer of this site, but their free gardening
+                                    guide helped me a lot. Thank you ...</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="">
+                                        <img src="./image/34444.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h4>Ahsoka Tano</h4>
+                                        <span>Firefighter</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex p-3 rounded-4 mb-4 flex-column gap-3 bg-ohhh/50 ">
+                                <div class="d-flex gap-1">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                    <img src="./image/star.png" alt="">
+                                </div>
+                                <p class="mb-0">I’m not really a customer of this site, but their free gardening
+                                    guide helped me a lot. Thank you ...</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="">
+                                        <img src="./image/34444.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <h4>Ahsoka Tano</h4>
+                                        <span>Firefighter</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-center">
+                                <button class="boooo d-flex align-items-center gap-2 p-2 px-4 rounded-pill">
+                                    <a class="text-light" href="">load more</a>
+                                    <svg width="21" height="31" viewBox="0 0 21 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_25)">
+                                            <path
+                                                d="M10.78 14.955C10.74 14.8484 10.68 14.755 10.6 14.675L6.44 10.515C6.28 10.355 6.08333 10.2717 5.85 10.265C5.61666 10.2584 5.41666 10.3384 5.25 10.505C5.08333 10.6717 5 10.8717 5 11.105C5 11.3384 5.08 11.535 5.24 11.695L8 14.435H1.68C1.45333 14.435 1.25666 14.5184 1.09 14.685C0.92333 14.8517 0.839996 15.0484 0.839996 15.275C0.839996 15.5017 0.92333 15.6984 1.09 15.865C1.25666 16.0317 1.45333 16.115 1.68 16.115H8L5.24 18.855C5.08 19.015 5 19.2117 5 19.445C5 19.6784 5.08 19.8784 5.24 20.045C5.4 20.2117 5.6 20.295 5.84 20.295C6.08 20.295 6.28 20.2084 6.44 20.035L10.6 15.875C10.68 15.795 10.74 15.7017 10.78 15.595C10.8733 15.3817 10.8733 15.1684 10.78 14.955Z"
+                                                fill="white"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_25">
+                                                <rect width="20" height="20" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.839996 25.275)"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-12">
+                            <img class="w-100 h-100" src="./image/y699.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="container-fluid container-xxl mb-5">
+                <h4 class="text-[#124838] mb-3">aryanak blog</h4>
+                <h1 class="fs-1 text-[#E3A476]">To Bring more <span class="font-bold">Green
+                    into your home</span></h1>
+            </div>
+            <div class="container-fluid container-xxl">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/123.png" alt="">
+                            </div>
+                            <div class="d-block text-start">
+                                <p class="mb-0">5 mins read</p>
+                                <h3 class="text-[#124838] font-bold fs-3 w-75">4 Ways to Level Up Your
+                                    Indoor Gardening Game</h3>
+                            </div>
+                            <div class="">
+                                <p class="mb-0">Indoor gardening is not just about
+                                    maintaining plants but also about…</p>
+                                <a class="mt-3 d-block" href="">read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/po.png" alt="">
+                            </div>
+                            <div class="d-block text-start">
+                                <p class="mb-0">5 mins read</p>
+                                <h3 class="text-[#124838] font-bold fs-3 ">6 reasons to reconsider
+                                    where to plant your next fruit
+                                    tree</h3>
+                            </div>
+                            <div class="">
+                                <p class="mb-0">Growing fruit trees indoors means you get to
+                                    control everything from the light to humidity…</p>
+                                <a class="mt-3 d-block" href="">read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="">
+                                <img class="w-100 h-100" src="./image/r5.png" alt="">
+                            </div>
+                            <div class="d-block text-start">
+                                <p class="mb-0">5 mins read</p>
+                                <h3 class="text-[#124838] font-bold fs-3 ">Cactus: Some Common Myths
+                                    and Misconceptions</h3>
+                            </div>
+                            <div class="">
+                                <p class="mb-0">Cactus Plants symbolize endurance,
+                                    persistence, & toughness. Gifting someone …</p>
+                                <a class="mt-3 d-block" href="">read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="container-fluid container-xxl">
+                <div class="d-flex justify-center">
+                    <button class="boooo d-flex align-items-center gap-2 p-2 px-4 rounded-pill">
+                        <a class="text-light" href="">see all posts</a>
+                        <svg width="21" height="31" viewBox="0 0 21 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_25)">
+                                <path
+                                    d="M10.78 14.955C10.74 14.8484 10.68 14.755 10.6 14.675L6.44 10.515C6.28 10.355 6.08333 10.2717 5.85 10.265C5.61666 10.2584 5.41666 10.3384 5.25 10.505C5.08333 10.6717 5 10.8717 5 11.105C5 11.3384 5.08 11.535 5.24 11.695L8 14.435H1.68C1.45333 14.435 1.25666 14.5184 1.09 14.685C0.92333 14.8517 0.839996 15.0484 0.839996 15.275C0.839996 15.5017 0.92333 15.6984 1.09 15.865C1.25666 16.0317 1.45333 16.115 1.68 16.115H8L5.24 18.855C5.08 19.015 5 19.2117 5 19.445C5 19.6784 5.08 19.8784 5.24 20.045C5.4 20.2117 5.6 20.295 5.84 20.295C6.08 20.295 6.28 20.2084 6.44 20.035L10.6 15.875C10.68 15.795 10.74 15.7017 10.78 15.595C10.8733 15.3817 10.8733 15.1684 10.78 14.955Z"
+                                    fill="white"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_25">
+                                    <rect width="20" height="20" fill="white"
+                                        transform="matrix(1 0 0 -1 0.839996 25.275)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="container-fluid container-xxl">
+                <div class="row align-items-center g-4">
+
+                    <div class="col-lg-6 col-12">
+                        <div class="">
+                            <img class="w-100 h-100" src="./image/erer.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="d-flex flex-column gap-4">
+                            <h3 class="text-[#124838] mb-0 fs-3">join us</h3>
+                            <h1 class="text-[#E3A476] mb-0 fs-1">Subscribe to
+                                our Newsletter</h1>
+                            <p class="text-[#124838] mb-0">Get Our <span class="text-[#124838] font-bold">Beginners Guide To Plant Parenthood
+                                for free</span></p>
+                            <form class=" position-relative start-0" action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control rounded-pill position-relative">
+                                    <button class="input-group-text rounded-pill position-absolute end-0 bg-success text-light  ">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="">
+        <img class="w-100 h-100 d-md-flex d-none" src="./image/112.png" alt="">
+        <img class="d-flex d-md-none" src="./image/34444444444444444444444444444.png" alt="">
+        <div class="">
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
